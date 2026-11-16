@@ -1,0 +1,677 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{FACEF115-B0DB-4693-8005-B149507D4761}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>Controle_de_Estoque</RootNamespace>
+    <AssemblyName>Controle de Pedidos</AssemblyName>
+    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <Deterministic>true</Deterministic>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <PublishUrl>C:\Users\paulo\OneDrive\Trabalhos\</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Disk</InstallFrom>
+    <UpdateEnabled>false</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <ApplicationRevision>11</ApplicationRevision>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <PublishWizardCompleted>true</PublishWizardCompleted>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationIcon>Developers.ico</ApplicationIcon>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ManifestCertificateThumbprint>D85147C52099BE9323FCC2B312A5716249F83100</ManifestCertificateThumbprint>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ManifestKeyFile>Controle de Pedidos_TemporaryKey.pfx</ManifestKeyFile>
+  </PropertyGroup>
+  <PropertyGroup>
+    <GenerateManifests>true</GenerateManifests>
+  </PropertyGroup>
+  <PropertyGroup>
+    <SignManifests>true</SignManifests>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System">
+      <HintPath>..\..\..\..\..\..\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.7.2\System.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Classes\VariáveisGlobais.cs" />
+    <Compile Include="Controles\ManualUsuárioAddCliente.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Controles\ManualUsuárioAddCliente.Designer.cs">
+      <DependentUpon>ManualUsuárioAddCliente.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Controles\ManualUsuárioAddPedidos.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Controles\ManualUsuárioAddPedidos.Designer.cs">
+      <DependentUpon>ManualUsuárioAddPedidos.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Controles\ManualUsuárioAltPedidos.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Controles\ManualUsuárioAltPedidos.Designer.cs">
+      <DependentUpon>ManualUsuárioAltPedidos.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Controles\ManualUsuárioHome.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Controles\ManualUsuárioHome.Designer.cs">
+      <DependentUpon>ManualUsuárioHome.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Controles\ManualUsuárioPedido.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Controles\ManualUsuárioPedido.Designer.cs">
+      <DependentUpon>ManualUsuárioPedido.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Controles\ManualUsuárioPesquisaPedido.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Controles\ManualUsuárioPesquisaPedido.Designer.cs">
+      <DependentUpon>ManualUsuárioPesquisaPedido.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Controles\ManualUsuárioUser.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Controles\ManualUsuárioUser.Designer.cs">
+      <DependentUpon>ManualUsuárioUser.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Controles\mbAviso10.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Controles\mbAviso10.Designer.cs">
+      <DependentUpon>mbAviso10.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Controles\mbAviso11.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Controles\mbAviso11.Designer.cs">
+      <DependentUpon>mbAviso11.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Controles\mbAviso12.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Controles\mbAviso12.Designer.cs">
+      <DependentUpon>mbAviso12.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Controles\mbAviso13.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Controles\mbAviso13.Designer.cs">
+      <DependentUpon>mbAviso13.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Controles\mbAviso14.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Controles\mbAviso14.Designer.cs">
+      <DependentUpon>mbAviso14.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Controles\mbAviso15.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Controles\mbAviso15.Designer.cs">
+      <DependentUpon>mbAviso15.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Controles\mbAviso16.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Controles\mbAviso16.Designer.cs">
+      <DependentUpon>mbAviso16.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Controles\mbAviso17.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Controles\mbAviso17.Designer.cs">
+      <DependentUpon>mbAviso17.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Controles\mbAviso18.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Controles\mbAviso18.Designer.cs">
+      <DependentUpon>mbAviso18.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Controles\mbAviso19.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Controles\mbAviso19.Designer.cs">
+      <DependentUpon>mbAviso19.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Controles\mbAviso2.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Controles\mbAviso2.Designer.cs">
+      <DependentUpon>mbAviso2.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Controles\mbAviso1.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Controles\mbAviso1.Designer.cs">
+      <DependentUpon>mbAviso1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Controles\mbAviso20.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Controles\mbAviso20.Designer.cs">
+      <DependentUpon>mbAviso20.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Controles\mbAviso3.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Controles\mbAviso3.Designer.cs">
+      <DependentUpon>mbAviso3.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Controles\mbAviso4.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Controles\mbAviso4.Designer.cs">
+      <DependentUpon>mbAviso4.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Controles\mbAviso5.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Controles\mbAviso5.Designer.cs">
+      <DependentUpon>mbAviso5.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Controles\mbAviso6.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Controles\mbAviso6.Designer.cs">
+      <DependentUpon>mbAviso6.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Controles\mbAviso7.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Controles\mbAviso7.Designer.cs">
+      <DependentUpon>mbAviso7.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Controles\mbAviso8.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Controles\mbAviso8.Designer.cs">
+      <DependentUpon>mbAviso8.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Controles\mbAviso9.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Controles\mbAviso9.Designer.cs">
+      <DependentUpon>mbAviso9.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Controles\mbCad.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Controles\mbCad.Designer.cs">
+      <DependentUpon>mbCad.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Controles\mbConcluirPed.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Controles\mbConcluirPed.Designer.cs">
+      <DependentUpon>mbConcluirPed.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Controles\mbExcluirItem.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Controles\mbExcluirItem.Designer.cs">
+      <DependentUpon>mbExcluirItem.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Controles\mbExcluirPed.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Controles\mbExcluirPed.Designer.cs">
+      <DependentUpon>mbExcluirPed.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Controles\mbRelatorio.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Controles\mbRelatorio.Designer.cs">
+      <DependentUpon>mbRelatorio.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Controles\mbSair.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Controles\mbSair.Designer.cs">
+      <DependentUpon>mbSair.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Controle_PedidosDataSet.cs">
+      <DependentUpon>Controle_PedidosDataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Controle_PedidosDataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Controle_PedidosDataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Controles\Button1.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Controles\TextBox1.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Controles\TextBox1.Designer.cs">
+      <DependentUpon>TextBox1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Dados\DataSet_Banco1.cs">
+      <DependentUpon>DataSet_Banco1.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Dados\DataSet_Banco1.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DataSet_Banco1.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\frmAddCliente.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\frmAddCliente.Designer.cs">
+      <DependentUpon>frmAddCliente.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\frmAddPedidos.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\frmAddPedidos.Designer.cs">
+      <DependentUpon>frmAddPedidos.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\frmAltItensPed.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\frmAltItensPed.Designer.cs">
+      <DependentUpon>frmAltItensPed.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\frmAltPedidos.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\frmAltPedidos.Designer.cs">
+      <DependentUpon>frmAltPedidos.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\frmAltQuantItem.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\frmAltQuantItem.Designer.cs">
+      <DependentUpon>frmAltQuantItem.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\frmCadastro.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\frmCadastro.Designer.cs">
+      <DependentUpon>frmCadastro.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\frmHome.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\frmHome.Designer.cs">
+      <DependentUpon>frmHome.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\frmItensPedido.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\frmItensPedido.Designer.cs">
+      <DependentUpon>frmItensPedido.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\frmLogin.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\frmLogin.Designer.cs">
+      <DependentUpon>frmLogin.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\frmPedidos.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\frmPedidos.Designer.cs">
+      <DependentUpon>frmPedidos.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\frmPesquisarPedidos.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\frmPesquisarPedidos.Designer.cs">
+      <DependentUpon>frmPesquisarPedidos.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\frmProdutos.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\frmProdutos.Designer.cs">
+      <DependentUpon>frmProdutos.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\frmRelatorios.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\frmRelatorios.Designer.cs">
+      <DependentUpon>frmRelatorios.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\frmUsuário.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\frmUsuário.Designer.cs">
+      <DependentUpon>frmUsuário.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="Controles\ManualUsuárioAddCliente.resx">
+      <DependentUpon>ManualUsuárioAddCliente.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controles\ManualUsuárioAddPedidos.resx">
+      <DependentUpon>ManualUsuárioAddPedidos.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controles\ManualUsuárioAltPedidos.resx">
+      <DependentUpon>ManualUsuárioAltPedidos.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controles\ManualUsuárioHome.resx">
+      <DependentUpon>ManualUsuárioHome.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controles\ManualUsuárioPedido.resx">
+      <DependentUpon>ManualUsuárioPedido.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controles\ManualUsuárioPesquisaPedido.resx">
+      <DependentUpon>ManualUsuárioPesquisaPedido.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controles\ManualUsuárioUser.resx">
+      <DependentUpon>ManualUsuárioUser.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controles\mbAviso10.resx">
+      <DependentUpon>mbAviso10.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controles\mbAviso11.resx">
+      <DependentUpon>mbAviso11.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controles\mbAviso12.resx">
+      <DependentUpon>mbAviso12.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controles\mbAviso13.resx">
+      <DependentUpon>mbAviso13.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controles\mbAviso14.resx">
+      <DependentUpon>mbAviso14.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controles\mbAviso15.resx">
+      <DependentUpon>mbAviso15.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controles\mbAviso16.resx">
+      <DependentUpon>mbAviso16.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controles\mbAviso17.resx">
+      <DependentUpon>mbAviso17.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controles\mbAviso18.resx">
+      <DependentUpon>mbAviso18.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controles\mbAviso19.resx">
+      <DependentUpon>mbAviso19.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controles\mbAviso2.resx">
+      <DependentUpon>mbAviso2.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controles\mbAviso1.resx">
+      <DependentUpon>mbAviso1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controles\mbAviso20.resx">
+      <DependentUpon>mbAviso20.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controles\mbAviso3.resx">
+      <DependentUpon>mbAviso3.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controles\mbAviso4.resx">
+      <DependentUpon>mbAviso4.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controles\mbAviso5.resx">
+      <DependentUpon>mbAviso5.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controles\mbAviso6.resx">
+      <DependentUpon>mbAviso6.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controles\mbAviso7.resx">
+      <DependentUpon>mbAviso7.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controles\mbAviso8.resx">
+      <DependentUpon>mbAviso8.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controles\mbAviso9.resx">
+      <DependentUpon>mbAviso9.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controles\mbCad.resx">
+      <DependentUpon>mbCad.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controles\mbConcluirPed.resx">
+      <DependentUpon>mbConcluirPed.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controles\mbExcluirItem.resx">
+      <DependentUpon>mbExcluirItem.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controles\mbExcluirPed.resx">
+      <DependentUpon>mbExcluirPed.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controles\mbRelatorio.resx">
+      <DependentUpon>mbRelatorio.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controles\mbSair.resx">
+      <DependentUpon>mbSair.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controles\TextBox1.resx">
+      <DependentUpon>TextBox1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\frmAddCliente.resx">
+      <DependentUpon>frmAddCliente.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\frmAddPedidos.resx">
+      <DependentUpon>frmAddPedidos.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\frmAltItensPed.resx">
+      <DependentUpon>frmAltItensPed.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\frmAltPedidos.resx">
+      <DependentUpon>frmAltPedidos.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\frmAltQuantItem.resx">
+      <DependentUpon>frmAltQuantItem.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\frmCadastro.resx">
+      <DependentUpon>frmCadastro.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\frmHome.resx">
+      <DependentUpon>frmHome.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\frmItensPedido.resx">
+      <DependentUpon>frmItensPedido.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\frmLogin.resx">
+      <DependentUpon>frmLogin.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\frmLogin.zu.resx">
+      <DependentUpon>frmLogin.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\frmPedidos.resx">
+      <DependentUpon>frmPedidos.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\frmPesquisarPedidos.resx">
+      <DependentUpon>frmPesquisarPedidos.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\frmProdutos.resx">
+      <DependentUpon>frmProdutos.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\frmRelatorios.resx">
+      <DependentUpon>frmRelatorios.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\frmUsuário.resx">
+      <DependentUpon>frmUsuário.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <None Include="Controle de Pedidos_TemporaryKey.pfx" />
+    <None Include="Controle_PedidosDataSet.xsc">
+      <DependentUpon>Controle_PedidosDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="Controle_PedidosDataSet.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>Controle_PedidosDataSet.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Controle_PedidosDataSet.xss">
+      <DependentUpon>Controle_PedidosDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="Dados\DataSet_Banco1.xsc">
+      <DependentUpon>DataSet_Banco1.xsd</DependentUpon>
+    </None>
+    <None Include="Dados\DataSet_Banco1.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>DataSet_Banco1.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="Dados\DataSet_Banco1.xss">
+      <DependentUpon>DataSet_Banco1.xsd</DependentUpon>
+    </None>
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Mídia\ver.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\DEvelopers.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Mídia\não_ver.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Sem Título-1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\x.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Mídia\user.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Mídia\home.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Mídia\user %281%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Mídia\produtos.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Mídia\produtos %281%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Mídia\pedidos.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Mídia\pedidos %281%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Mídia\home %281%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Mídia\logout.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Developers.ico" />
+    <Content Include="Developers2.ico" />
+    <None Include="Resources\Manual de Usuário - TCC1.png" />
+    <None Include="Resources\Manual de Usuário_Add_Pedido3.png" />
+    <None Include="Resources\Manual de Usuário_Add_Pedido2.png" />
+    <None Include="Resources\Manual de Usuário_Add_Pedido1.png" />
+    <None Include="Resources\Manual de Usuário - TCC%281%29.png" />
+    <None Include="Resources\Manual de Usuário - TCC.png" />
+    <None Include="Resources\diskette%283%29.png" />
+    <None Include="Resources\diskette%281%29.png" />
+    <None Include="Mídia\Vanusa.png" />
+    <None Include="Mídia\Manual de Usuário - Add Pedidos 1%281%29.png" />
+    <None Include="Mídia\Manual de Usuário - Add Pedidos 3.png" />
+    <None Include="Mídia\Manual de Usuário - Add Pedido 2.png" />
+    <None Include="Mídia\Manual de Usuário - Add Pedidos 1.png" />
+    <None Include="Mídia\Manual de Usuário - Alterar Pedidos 3.png" />
+    <None Include="Mídia\Manual de Usuário - Alterar Pedidos 2.png" />
+    <None Include="Mídia\Manual de Usuário - Alterar Pedidos 1.png" />
+    <None Include="Mídia\Manual de Usuário - Pesquisa Pedidos 2.png" />
+    <None Include="Mídia\Manual de Usuário - Pesquisa Pedidos.png" />
+    <None Include="Mídia\Manual de Usuário - Pedidos.png" />
+    <None Include="Mídia\Manual de Usuário - User 3.png" />
+    <None Include="Mídia\Manual de Usuário - User 2.png" />
+    <None Include="Mídia\Manual de Usuário - TCC.png" />
+    <None Include="Mídia\lata-de-lixo %282%29.png" />
+    <None Include="Mídia\lata-de-lixo %281%29.png" />
+    <None Include="Resources\lata-de-lixo.png" />
+    <None Include="Mídia\lata-de-lixo.png" />
+    <None Include="Mídia\lupa3.png" />
+    <None Include="Mídia\lupa2.png" />
+    <None Include="Mídia\arco4.png" />
+    <None Include="Mídia\arco3.png" />
+    <None Include="Mídia\arco2.png" />
+    <None Include="Mídia\arco1.png" />
+    <None Include="Mídia\lupa.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include=".NETFramework,Version=v4.7.2">
+      <Visible>False</Visible>
+      <ProductName>Microsoft .NET Framework 4.7.2 %28x86 e x64%29</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>
